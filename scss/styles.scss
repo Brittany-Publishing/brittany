@@ -1,0 +1,155 @@
+@import "variables.scss";
+@import "flex.scss";
+@import "vendor-prefix.scss";
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+
+body{
+	margin:0;
+	font-family: $pt-sans;
+	@include flexbox;
+	@include flex-direction(column);
+
+	a {
+		text-decoration:none;
+		color: $bunting;
+		transition: 0.2s ease-in; // add mixin later
+	}
+
+	a:hover {
+		color: $chesnut-rose;
+	}
+
+	@media all and (min-width: 750px) {
+		@include flex-direction(row);
+		@include align-items(center);
+	}
+
+	.feature-img {
+		background-color: $bluewood;
+		height: 16em;
+		max-width:100vw;
+		position:relative;
+
+		figure {
+			background-image: url(../assets/brittany.png);
+			/*background-image: linear-gradient(rgba(248, 110, 121, 0.8), rgba(248, 110, 121, 0.8)), url("../assets/brittany.jpg");*/
+			background-position: 50% 50%;
+			background-size:contain;
+			background-repeat:no-repeat;
+			height:300px;
+			width:300px;
+			position: absolute;
+			right:0;
+			bottom:0;
+			margin-bottom:0;
+
+			@media all and (min-width:750px) {
+				height:700px;
+				width:700px;
+			}
+		}
+
+		.row{
+
+			display:flex;
+			width:410px;
+			justify-content: space-between;
+			margin-top:20px;
+
+			div {
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 0 10px 16px 10px;
+				border-color: transparent transparent #f86e79 transparent;
+			}
+
+			&:nth-child(n+8) {
+				display:none;
+				@media all and (min-width:750px) {
+					display:flex;
+				}
+			}
+
+			
+		}
+
+		/*.fade-in {
+			opacity:0;  /* make things invisible upon start 
+		    animation: fadeIn ease-in 1;   call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time 
+		    animation-fill-mode:forwards;   this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)				    
+		    animation-duration:1s;
+			animation-delay: 0.7s;
+		}*/
+		
+		@media all and (min-width: 750px) {
+			width:52%;
+			min-height:100vh;
+		}
+	}
+
+	.main-content {
+		margin:15px;
+		text-align:center;
+
+		h1 {
+			color: $bunting;
+			font-size: $h1-size;
+		}
+
+		.button {
+			border: 2px solid $chesnut-rose;
+			color: $chesnut-rose;
+			font-size: 15px;
+			margin-bottom:15px;
+    		padding: 10px 15px;
+    		text-transform: uppercase;
+		}
+
+		.button:hover {
+			background-color: $chesnut-rose;
+			color:$alabaster;
+			cursor: pointer;
+		}
+
+		nav {
+			@include flexbox;
+			@include justify-content(space-around);
+			margin-top:30px;
+		}
+
+		.socials {
+			margin: 50px 0px;
+			text-align:center;
+
+			a {
+				figure {
+					width:30px;
+					height:30px;
+					@include background-size(cover);
+					margin:0 5px;
+					display:inline-block;
+				}
+
+				.fb {
+					background-image: url("../assets/fb.png");
+				}
+
+				.insta {
+					background-image: url("../assets/insta.png");
+				}
+
+				.linkedin {
+					background-image: url("../assets/linkedin.png");
+				}
+			}
+		}
+
+		@media all and (min-width: 750px) {
+			width:45%;
+			margin:30px;
+		}
+	}
+}
+
+@-webkit-keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
