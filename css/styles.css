@@ -120,7 +120,8 @@ body {
         color: #141b41;
         font-size: 40px;
         font-weight: 100;
-        text-align: left; }
+        text-align: left;
+        letter-spacing: 1.5px; }
       @media all and (min-width: 750px) {
         body .landing .main-content {
           width: 37%;
@@ -136,10 +137,10 @@ body {
         width: 0;
         border-style: solid;
         border-color: #f86e79;
-        border-width: 0 3px 3px 0;
+        border-width: 0 4px 4px 0;
         padding: 10px;
         animation: bounce 2s infinite;
-        animation-delay: 3s; }
+        animation-delay: 2s; }
     @media all and (min-width: 750px) {
       body .landing {
         -webkit-flex-direction: row;
