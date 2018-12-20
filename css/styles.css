@@ -9,16 +9,29 @@
 * {
   box-sizing: border-box; }
 
+html {
+  scroll-behavior: smooth; }
+
 body {
   margin: 0;
   font-family: "PT Sans", sans-serif;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  /* Published Works Section */
+  /* Professional Section */ }
   body a {
     text-decoration: none;
     color: #141b41;
     transition: 0.2s ease-in; }
   body a:hover {
     color: #22f79b; }
+  body h2 {
+    color: #8eb8e5;
+    font-size: 35px; }
+  body p {
+    color: #141b41;
+    font-size: 25px;
+    line-height: 45px; }
   body .landing {
     display: -webkit-box;
     display: -moz-box;
@@ -237,6 +250,61 @@ body {
         -moz-align-items: center;
         -ms-align-items: center;
         align-items: center; } }
+  body .published-works {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    position: relative; }
+    body .published-works .feature-img {
+      margin-top: 100px;
+      min-height: 100%; }
+      body .published-works .feature-img figure {
+        background-image: url(../assets/brittany_and_ocean.jpg);
+        background-position: 50% 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        min-height: 100%;
+        margin: 0;
+        order: 1; }
+      @media all and (min-width: 750px) {
+        body .published-works .feature-img {
+          width: 50%;
+          max-width: initial;
+          order: 2;
+          margin-top: 0; } }
+    body .published-works .main-content {
+      margin: 15px;
+      text-align: center;
+      order: 2; }
+      body .published-works .main-content p {
+        text-align: left; }
+      body .published-works .main-content a {
+        font-size: 20px;
+        border: 2px solid #22f79b;
+        color: #22f79b;
+        padding: 10px 70px;
+        transition: 0.2s ease-in; }
+      body .published-works .main-content a:hover {
+        color: white;
+        background-color: #22f79b; }
+      @media all and (min-width: 750px) {
+        body .published-works .main-content {
+          width: 50%;
+          margin: 0;
+          padding: 100px;
+          order: 1; } }
+    @media all and (min-width: 750px) {
+      body .published-works {
+        -webkit-flex-direction: row;
+        -moz-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row; } }
   body .professional {
     display: -webkit-box;
     display: -moz-box;
@@ -256,8 +324,7 @@ body {
         background-size: cover;
         background-repeat: no-repeat;
         min-height: 20em;
-        margin: 0;
-        order: 1; }
+        margin: 0; }
         @media all and (min-width: 750px) {
           body .professional .feature-img figure {
             min-height: 33%; } }
@@ -265,17 +332,16 @@ body {
         body .professional .feature-img {
           width: 50%;
           max-width: initial;
-          order: 2; } }
+          margin-top: 0; } }
     body .professional .main-content {
       margin: 15px;
       text-align: center;
-      order: 2; }
+      text-align: left; }
       @media all and (min-width: 750px) {
         body .professional .main-content {
           width: 50%;
           margin: 0;
-          padding: 30px;
-          order: 1; } }
+          padding: 30px; } }
     @media all and (min-width: 750px) {
       body .professional {
         -webkit-flex-direction: row;
