@@ -174,8 +174,7 @@ body{
 			}
 
 			.row{
-
-				@include flexbox(flex);
+				@include flexbox;
 				max-width:285px;
 				justify-content: space-between;
 				margin-top:20px;
@@ -190,7 +189,7 @@ body{
 					&:nth-child(n+8) {
 						display:none;
 						@media all and (min-width:750px) {
-							@include flexbox(flex);
+							@include flexbox;
 						}
 					}
 				}
@@ -198,7 +197,7 @@ body{
 				&:nth-child(n+8) {
 					display:none;
 					@media all and (min-width:750px) {
-						@include flexbox(flex);
+						@include flexbox;
 					}
 				}
 
@@ -307,17 +306,45 @@ body{
 
 		.feature-img {
 
+			margin-top:100px;
 
+			figure {
+				background-image: url(../assets/brittany_and_ocean.jpg);
+				background-position: 50% 50%;
+				background-size:cover;
+				background-repeat:no-repeat;
+				min-height:20em;
+				margin:0;
+				order:1;
+
+				@media all and (min-width:750px) {
+					min-height:33%;
+				}
+			}
 
 			@media all and (min-width: 750px) {
-				    width: 50%;
-					max-width:initial;
+				width: 50%;
+				max-width:initial;
+				order:2;
+				
+			}
+		}
+
+		.main-content {
+			margin:15px;
+			text-align:center;
+			order:2;
+
+			@media all and (min-width: 750px) {
+				width:50%;
+				margin:0;
+				padding:30px;
+				order:1;
 			}
 		}
 
 		@media all and (min-width: 750px) {
 			@include flex-direction(row);
-			@include align-items(center);
 		}
 	}
 }

@@ -18,7 +18,7 @@ body {
     color: #141b41;
     transition: 0.2s ease-in; }
   body a:hover {
-    color: #f86e79; }
+    color: #22f79b; }
   body .landing {
     display: -webkit-box;
     display: -moz-box;
@@ -126,6 +126,10 @@ body {
             height: 700px;
             width: 700px; } }
       body .landing .feature-img .row {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
         display: flex;
         max-width: 285px;
         justify-content: space-between;
@@ -140,11 +144,19 @@ body {
             display: none; }
             @media all and (min-width: 750px) {
               body .landing .feature-img .row div:nth-child(n+8) {
+                display: -webkit-box;
+                display: -moz-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
                 display: flex; } }
         body .landing .feature-img .row:nth-child(n+8) {
           display: none; }
           @media all and (min-width: 750px) {
             body .landing .feature-img .row:nth-child(n+8) {
+              display: -webkit-box;
+              display: -moz-box;
+              display: -ms-flexbox;
+              display: -webkit-flex;
               display: flex; } }
         @media all and (min-width: 750px) {
           body .landing .feature-img .row {
@@ -225,6 +237,51 @@ body {
         -moz-align-items: center;
         -ms-align-items: center;
         align-items: center; } }
+  body .professional {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    position: relative; }
+    body .professional .feature-img {
+      margin-top: 100px; }
+      body .professional .feature-img figure {
+        background-image: url(../assets/brittany_and_ocean.jpg);
+        background-position: 50% 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        min-height: 20em;
+        margin: 0;
+        order: 1; }
+        @media all and (min-width: 750px) {
+          body .professional .feature-img figure {
+            min-height: 33%; } }
+      @media all and (min-width: 750px) {
+        body .professional .feature-img {
+          width: 50%;
+          max-width: initial;
+          order: 2; } }
+    body .professional .main-content {
+      margin: 15px;
+      text-align: center;
+      order: 2; }
+      @media all and (min-width: 750px) {
+        body .professional .main-content {
+          width: 50%;
+          margin: 0;
+          padding: 30px;
+          order: 1; } }
+    @media all and (min-width: 750px) {
+      body .professional {
+        -webkit-flex-direction: row;
+        -moz-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row; } }
 
 @-webkit-keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
