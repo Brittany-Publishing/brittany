@@ -4,13 +4,18 @@
 @import url('https://fonts.googleapis.com/css?family=PT+Sans');
 
 * {
-		box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
 }
 
 body{
 	margin:0;
 	font-family: $pt-sans;
 	overflow-x:hidden;
+	scroll-behavior: smooth;
 
 	a {
 		text-decoration:none;
@@ -19,10 +24,20 @@ body{
 	}
 
 	a:hover {
-		color: $chesnut-rose;
+		color: $silver-tree;
 	}
 
-	
+	h2 {
+		color: $bluewood;
+		font-size: 35px;		
+	}
+
+	p {
+		color: $bunting;
+		font-size: 25px;
+		line-height: 45px;
+	}
+
 
 	.landing {
 
@@ -174,8 +189,7 @@ body{
 			}
 
 			.row{
-
-				display:flex;
+				@include flexbox;
 				max-width:285px;
 				justify-content: space-between;
 				margin-top:20px;
@@ -190,7 +204,7 @@ body{
 					&:nth-child(n+8) {
 						display:none;
 						@media all and (min-width:750px) {
-							display:flex;
+							@include flexbox;
 						}
 					}
 				}
@@ -198,7 +212,7 @@ body{
 				&:nth-child(n+8) {
 					display:none;
 					@media all and (min-width:750px) {
-						display:flex;
+						@include flexbox;
 					}
 				}
 
@@ -297,6 +311,125 @@ body{
 		@media all and (min-width: 750px) {
 			@include flex-direction(row);
 			@include align-items(center);
+		}
+	}
+
+
+	/* Published Works Section */
+
+
+	.published-works {
+		@include flexbox;
+		@include flex-direction(column);
+		position:relative;
+
+		.feature-img {
+
+			margin-top:100px;
+			min-height:100%;
+
+			figure {
+				background-image: url(../assets/brittany_and_ocean.jpg);
+				background-position: 50% 50%;
+				background-size:cover;
+				background-repeat:no-repeat;
+				min-height:100%;
+				margin:0;
+				order:1;
+			}
+
+			@media all and (min-width: 750px) {
+				width: 50%;
+				max-width:initial;
+				order:2;
+				margin-top:0;
+				
+			}
+		}
+
+		.main-content {
+			margin:15px;
+			text-align:center;
+			order:2;
+			
+			p {
+				text-align: left;
+			}
+
+			a {
+				font-size:20px;
+				border: 2px solid $silver-tree;
+				color:$silver-tree;
+				padding:10px 70px;
+				transition:0.2s ease-in;
+
+			}
+
+			a:hover {
+				color: white;
+				background-color: $silver-tree;
+			}
+
+			@media all and (min-width: 750px) {
+				width:50%;
+				margin:0;
+				padding:100px;
+				order:1;
+			}
+		}
+
+		@media all and (min-width: 750px) {
+			@include flex-direction(row);
+		}
+	}
+
+
+	/* Professional Section */
+
+	.professional {
+		@include flexbox;
+		@include flex-direction(column);
+		position:relative;
+
+		.feature-img {
+
+			margin-top:100px;
+
+			figure {
+				background-image: url(../assets/brittany_and_ocean.jpg);
+				background-position: 50% 50%;
+				background-size:cover;
+				background-repeat:no-repeat;
+				min-height:20em;
+				margin:0;
+
+				@media all and (min-width:750px) {
+					min-height:33%;
+				}
+			}
+
+			@media all and (min-width: 750px) {
+				width: 50%;
+				max-width:initial;
+				margin-top:0;
+				
+			}
+		}
+
+		.main-content {
+			margin:15px;
+			text-align:center;
+			text-align:left;
+
+			@media all and (min-width: 750px) {
+				width:50%;
+				margin:0;
+				padding:30px;
+			}
+		}
+
+		@media all and (min-width: 750px) {
+			@include flex-direction(row);
 		}
 	}
 }
