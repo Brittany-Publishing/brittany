@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Aref+Ruqaa|Raleway|Bree+Serif|Enriqueta|Rokkitt');
+
+body {
+  padding: 0.75rem;
+  background-color: rgb(32, 187, 157);
+  font-family: 'Rokkitt', serif;
+  font-size: 12pt;
+  color: rgb(237, 237, 237);
+}
+body > * {
+  margin: 0 auto;
+  max-width: 64rem;
+  background-color: rgb(44, 60, 80);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Raleway', sans-serif;
+  color: rgb(227, 75, 98);
+  font-weight: normal;
+}
+h1 {
+  letter-spacing: 2px;
+  margin: 0 0 .125em 0;
+  position: relative;
+  /*top: -0.75em;
+  margin-bottom: -0.75em;*/
+}
+h1:after {
+  display: block;
+  content: " ";
+}
+
+footer {
+  font-family: 'Enriqueta', serif;  
+}
+
+.App {
+  text-align: left;
+  margin: 1em;
+}
+
+.App-logo {
+  height: 40vmin;
+}
+
+.App-header {
+  min-height: 100vh;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    /*transform: rotate(0deg);*/
+  }
+  to {
+    /*transform: rotate(360deg);*/
+  }
+}
+
+@media all and (min-width: 960px) {
+  header .splash {
+    height: 100vh;
+    width: 20vw;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  header h1, header p {
+    width: 80vw;
+    height: 25vh;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  header h1 {
+    top: 0;
+  }
+  header p:nth-of-type(1) {
+    top: 20vh;
+  }
+  header p:nth-of-type(2) {
+    top: 40vh;
+  }
+  header p:nth-of-type(3) {
+    top: 60vh;
+  }
+  header p:nth-of-type(4) {
+    top: 80vh;
+  }
+}
