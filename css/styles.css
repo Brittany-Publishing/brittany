@@ -25,13 +25,8 @@ body {
     transition: 0.2s ease-in; }
   body a:hover {
     color: #22f79b; }
-  body h2 {
-    color: #8eb8e5;
-    font-size: 35px; }
   body p {
-    color: #141b41;
-    font-size: 25px;
-    line-height: 45px; }
+    color: #141b41; }
   body .landing {
     display: -webkit-box;
     display: -moz-box;
@@ -64,9 +59,7 @@ body {
           left: -5px;
           cursor: pointer;
           opacity: 0;
-          /* hide this */
           z-index: 2;
-          /* and place it over the hamburger */
           -webkit-touch-callout: none; }
           body .landing nav #menuToggle input:checked ~ span {
             opacity: 1;
@@ -100,7 +93,7 @@ body {
           margin: -67px 0 0 -50px;
           padding: 50px;
           padding-top: 120px;
-          background: #efefef;
+          background: #fafdfb;
           list-style-type: none;
           min-height: 100vh;
           box-sizing: border-box;
@@ -265,7 +258,7 @@ body {
       margin-top: 100px;
       min-height: 100%; }
       body .published-works .feature-img figure {
-        background-image: url(../assets/brittany_and_ocean.jpg);
+        background-image: url("../assets/brittany_photo.jpg");
         background-position: 50% 50%;
         background-size: cover;
         background-repeat: no-repeat;
@@ -282,8 +275,13 @@ body {
       margin: 15px;
       text-align: center;
       order: 2; }
+      body .published-works .main-content h2 {
+        color: #8eb8e5;
+        font-size: 35px; }
       body .published-works .main-content p {
-        text-align: left; }
+        text-align: left;
+        font-size: 25px;
+        line-height: 45px; }
       body .published-works .main-content a {
         font-size: 20px;
         border: 2px solid #22f79b;
@@ -315,39 +313,66 @@ body {
     -moz-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
-    position: relative; }
-    body .professional .feature-img {
-      margin-top: 100px; }
-      body .professional .feature-img figure {
-        background-image: url(../assets/brittany_and_ocean.jpg);
-        background-position: 50% 50%;
-        background-size: cover;
-        background-repeat: no-repeat;
-        min-height: 20em;
-        margin: 0; }
-        @media all and (min-width: 750px) {
-          body .professional .feature-img figure {
-            min-height: 33%; } }
-      @media all and (min-width: 750px) {
-        body .professional .feature-img {
-          width: 50%;
-          max-width: initial;
-          margin-top: 0; } }
+    position: relative;
+    background-color: #fafdfb; }
     body .professional .main-content {
-      margin: 15px;
-      text-align: center;
-      text-align: left; }
-      @media all and (min-width: 750px) {
-        body .professional .main-content {
-          width: 50%;
-          margin: 0;
-          padding: 30px; } }
+      padding: 30px; }
+      body .professional .main-content h3 {
+        color: #8eb8e5;
+        font-size: 29px;
+        text-align: center; }
+        @media all and (min-width: 750px) {
+          body .professional .main-content h3 {
+            text-align: left; } }
+      body .professional .main-content h4 {
+        color: #141b41;
+        text-decoration: underline; }
+        @media all and (min-width: 750px) {
+          body .professional .main-content h4 {
+            margin-top: 0; } }
+      body .professional .main-content ul {
+        color: #141b41;
+        list-style: none;
+        font-style: italic; }
+      body .professional .main-content .container {
+        text-align: center; }
+        body .professional .main-content .container figure {
+          min-width: 80px;
+          height: 80px;
+          background-size: cover;
+          margin: 50px 0 0 0;
+          display: inline-block; }
+          @media all and (min-width: 750px) {
+            body .professional .main-content .container figure {
+              margin-top: 0;
+              margin-right: 50px; } }
+        body .professional .main-content .container .teacher {
+          background-image: url("../assets/teacher.png"); }
+        body .professional .main-content .container .edit {
+          background-image: url("../assets/edit.png"); }
+        body .professional .main-content .container .capitol {
+          background-image: url("../assets/capitol.png"); }
+        body .professional .main-content .container .shakespeare {
+          background-image: url("../assets/shakespeare.png"); }
+        body .professional .main-content .container .book {
+          background-image: url("../assets/book.png"); }
+        body .professional .main-content .container div {
+          text-align: left; }
+        @media all and (min-width: 750px) {
+          body .professional .main-content .container {
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-direction: row;
+            -moz-flex-direction: row;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            margin-top: 50px; } }
     @media all and (min-width: 750px) {
       body .professional {
-        -webkit-flex-direction: row;
-        -moz-flex-direction: row;
-        -ms-flex-direction: row;
-        flex-direction: row; } }
+        padding: 100px; } }
 
 @-webkit-keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
